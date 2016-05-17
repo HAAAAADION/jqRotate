@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="body">
+	<div class="head"><img src="images/fight_head.png" /></div>
+	<div class="container">
+		<div class="ly-plate">
+			<div class="rotate-bg"></div>
+	        <div class="lottery-star"><img src="images/rotate-static.png" id="lotteryBtn"></div>
+		</div>
+
+		<if condition="$win_list">
+		<div class="boxcontent prize">
+			<div class="box">
+				<div class="title-red">
+					<span>中奖名单：</span>
+				</div>
+				<div class="detail activity_win">
+					<ol>
+						<li>
+							<span class="des">用户1</span>
+							<span class="name">一等奖</span>
+							<span class="time">2016-05-05</span>
+						</li>
+						<li>
+							<span class="des">用户1</span>
+							<span class="name">一等奖</span>
+							<span class="time">2016-05-05</span>
+						</li>
+						<li>
+							<span class="des">用户1</span>
+							<span class="name">一等奖</span>
+							<span class="time">2016-05-05</span>
+						</li>
+						<li>
+							<span class="des">用户1</span>
+							<span class="name">一等奖</span>
+							<span class="time">2016-05-05</span>
+						</li>
+						<li>
+							<span class="des">用户1</span>
+							<span class="name">一等奖</span>
+							<span class="time">2016-05-05</span>
+						</li>
+						<li>
+							<span class="des">用户1</span>
+							<span class="name">一等奖</span>
+							<span class="time">2016-05-05</span>
+						</li>
+						<li>
+							<span class="des">用户1</span>
+							<span class="name">一等奖</span>
+							<span class="time">2016-05-05</span>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+		</if>
+
+		<div class="boxcontent prize">
+			<div class="box">
+				<div class="title-red">
+					<span>奖品设置：</span>
+				</div>
+				<div class="detail">
+					<p>1. 一等奖：iphone 6s Plus；</p>
+					<p>2. 二等奖：坤润财富平台体验金1000元；</p>
+					<p>3. 三等奖：坤润财富平台体验金500元；</p>
+					<p>4. 四等奖：话费30元；</p>
+					<p>5. 五等奖：话费10元；</p>
+				</div>
+			</div>
+		</div>
+
+		
+		<footer>*抽奖活动！</footer>
+
+	</div>
+</div>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/jqRotate.js"></script>
+<script src="js/carousel.js"></script>
+<script type="text/javascript">
+$('.boxcontent .box .detail ol').carousel();
+
+
+function getRandom(min, max){
+	return Math.round(min + Math.random() * (max - min));
+}
+
+$('.lottery-star').click(function(){
+	var id = getRandom(1, 5), totalAngles = 3600, text;
+
+	if (id == 1){
+		text = '恭喜获得iphone 6s plus';
+		totalAngles += 223;
+	}else if(id == 2){
+		text = '恭喜获得体验金1000元';
+		totalAngles += 134;
+	}else if(id == 3){
+		text = '恭喜获得体验金500元';
+		totalAngles += 360;
+	}else if (id == 4){
+		text = '恭喜话费30元';
+		totalAngles += 42;
+	}else if(id == 5){
+		text = '恭喜话费10元';
+		totalAngles += 270;
+	}else{
+		var rand = new Array(90, 180, 316);
+		text = '没有中奖,再接再厉!';
+		totalAngles += rand[getRandom(0, 2)];
+	}
+
+	$('.lottery-star').jqRotate({
+		time_limit: 10,
+		totalAngle: totalAngles,
+		ednSpeed: 'fast'
+	}, function(e){
+		alert(text);
+	});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+div, p, ul ,li, ol, span, em, a{
+	font-family: '微软雅黑';
+	margin: 0;
+	padding: 0;
+	border: 0;
+	color: #000;
+	list-style: none;
+}
+
+
+body, html{
+	background: #f4524a url(../images/body_bg.png);
+}
+
+.head{
+	margin-bottom: 5%;
+}
+
+.head img{
+	width: 100%;
+}
+
+.boxcontent{
+	width: 100%;
+	border-radius: 5px;
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+	overflow: auto;
+	margin: 10px 0;
+}
+
+.boxcontent .box{
+	border: 1px dashed rgba(0, 0, 0, 0.3);
+	margin: 2px;
+}
+
+.boxcontent .box .title-red{
+	background: url(../images/title-bg-red.png) no-repeat;
+	padding-left: 10px;
+}
+
+.boxcontent .box .title-red span{
+	color: #fff;
+}
+
+.boxcontent .box .detail{
+	margin: 15px;
+}
+
+.boxcontent .box .detail p{
+	color: #ca2c33;
+}
+
+.prize{
+	background: #FEF8B2;
+}
+
+footer{
+	color: #fff;
+	text-align: right;
+	margin: 50px 0 20px;
+}
+/* 公共部分 */
+
+
+.ly-plate{
+	position:relative;
+	width:509px;
+	height:509px;
+	margin: 0 auto 5%;
+	zoom: .6;
+	border-radius: 100%;
+	box-shadow: 0 0 0 5px #ca2c33;
+}
+
+.rotate-bg{
+	width:509px;
+	height:509px;
+   	background:url(../images/ly-plate.png);
+	position:absolute;
+	top:0;
+	left:0;
+	background-size: 100%;
+}
+
+.ly-plate div.lottery-star{
+	/*214, 214*/
+	width: 150px;
+	height:188px;
+	position:absolute;
+	/*115, 147*/
+	top: 139px;
+	left: 180px;
+	outline:none;
+	-webkit-transform: rotate3d(0,0,1,0);
+	-moz-transform: rotate3d(0,0,1,0);
+	-o-transform: rotate3d(0,0,1,0);
+	-ms-transform: rotate3d(0,0,1,0);
+	transform: rotate3d(0,0,1,0);
+
+	/*106, 139*/
+	transform-origin: 74px 115px;
+	-webkit-transform-origin: 74px 115px;
+	-moz-transform-origin: 74px 115px;
+	-o-transform-origin: 74px 115px;
+	-ms-transform-origin: 74px 115px;
+}
+
+.ly-plate div.lottery-star img{
+	height: 100%;
+}
+
+
+.ly-plate div.lottery-star #lotteryBtn{
+	cursor: pointer;
+	position: absolute;
+	top:0;
+	left:0;
+	*left:-107px
+}
+
+@media (min-width: 768px){
+	.ly-plate{
+		zoom: 1;
+	}
+}
+
+@media (max-width: 320px){
+	.ly-plate{
+		zoom: .5;
+	}
+}
+
+
+
+
+
+
+.boxcontent .box .detail{
+	position: relative;
+	overflow: hidden;
+	max-height: 120px;
+}
+
+.boxcontent .box .activity_win ol{
+	width: 100%;
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	-o-transform: translate3d(0,0,0);
+	-ms-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+.boxcontent .box .activity_win ol li{
+	color: #ca2c33;
+	height: 24px;
+}
+
+.boxcontent .box .activity_win ol li > span{
+	color: #ca2c33;
+	float: left;
+	padding: 2px 0;
+}
+
+.boxcontent .box .activity_win .name{
+	text-align: center;
+	width: 30%;
+}
+
+.boxcontent .box .activity_win .des{
+	display: inline-block;
+	width: 20%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space:nowrap;
+}
+
+
+
+.boxcontent .box .activity_win .time{
+	width: 50%;
+	text-align: right;
+}
+
+.boxcontent .box .lucky p span{
+	font-size: 24px;
+}
+
+@media (min-width: 640px){
+	.boxcontent .box .activity_win .time{
+		padding-right: 20px;
+	}
+
+	.boxcontent .box .activity_win .des{
+		padding-left: 20px;
+	}
+}
